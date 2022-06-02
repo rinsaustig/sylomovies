@@ -1,0 +1,49 @@
+<div class="container">
+  <img src="assets/cartelera.png" alt="cartelera" class="cart-img" />
+</div>
+<div class="img-container">
+  <div class="carousel-cont">
+    <ngb-carousel
+      #carousel
+      [interval]="3000"
+      [pauseOnHover]="pauseOnHover"
+      [pauseOnFocus]="pauseOnFocus"
+      (slide)="onSlide($event)"
+    >
+      <ng-template ngbSlide *ngFor="let movie of movies; index as i">
+        <div class="movie-title-container">
+          <div class="carousel-caption">
+            <h3>{{ movies[i].original_title }}</h3>
+          </div>
+        </div>
+        <a
+          href="https://www.google.fr/?q=Number+{{ i }}"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <div class="img-container">
+            <img
+              [src]="movie.poster_path"
+              alt="{{ this.movies[i].overview }}"
+              class="movie-img"
+            />
+          </div>
+        </a>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <br />
+  <div class="form-check container-check">
+    <button
+      type="button"
+      (click)="togglePaused()"
+      class="btn btn-outline-dark btn-sm"
+    >
+      {{ paused ? "Girar" : "Pausar" }}
+    </button>
+  </div>
+  <div class="ml-container">
+    <app-movies-list></app-movies-list>
+  </div>
+</div>

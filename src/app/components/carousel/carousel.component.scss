@@ -1,0 +1,89 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 6em;
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: flex-end;
+}
+.overlay {
+    background: rgba(50, 70, 80, 0.7);
+    overflow: hidden;
+    height: 100%;
+}
+.cart-img {
+    height: 80%;
+    padding-top: 2em;
+}
+
+.img-container {
+    width: 100%;
+    height: 430px;
+    align-items: center;
+    background: linear-gradient(
+        220deg,
+        rgba(0, 118, 132, 1) 35%,
+        rgba(0, 142, 137, 1) 54%,
+        rgba(0, 164, 128, 1) 79%,
+        rgba(0, 185, 107, 1) 100%
+    );
+}
+
+.movie-img {
+    width: 95vw;
+    position: relative;
+    opacity: 0.3;
+    top: -140px;
+    left: 15px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        top: 0px;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.movie-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: (#ffff, 0, 3);
+}
+
+.movie-title-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-check {
+    align-items: center;
+    padding: 1em 1em;
+    background-color: var(--background-color);
+    display: flex;
+}
+
+.carousel-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.ml-container {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
