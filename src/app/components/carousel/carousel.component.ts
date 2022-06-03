@@ -4,9 +4,10 @@ import {
   NgbSlideEvent,
   NgbSlideEventSource,
 } from '@ng-bootstrap/ng-bootstrap';
-import { Movie } from 'src/app/models/movie.interface';
+import { MovieModel } from 'src/app/models/movie.interface';
 
 import { CarouselServiceService } from 'src/app/services/carousel-service.service';
+import { AppStore } from 'src/app/store/app.store';
 
 @Component({
   selector: 'app-carousel',
@@ -14,7 +15,7 @@ import { CarouselServiceService } from 'src/app/services/carousel-service.servic
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit {
-  movies: Movie[] = [];
+  movies: MovieModel[] = [];
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
@@ -22,7 +23,10 @@ export class CarouselComponent implements OnInit {
   pauseOnFocus = true;
 
   @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
-  constructor(private carouselService: CarouselServiceService) {}
+  constructor(
+    private carouselService: CarouselServiceService,
+    private store: AppStore
+  ) {}
 
   ngOnInit(): void {
     this.carouselInit();
@@ -34,7 +38,7 @@ export class CarouselComponent implements OnInit {
       this.movies.map((element: any) => {
         element.poster_path = `https://image.tmdb.org/t/p/original${element.poster_path}`;
       });
-      console.log(this.movies);
+      this.store.saveMovies(this.movies);
     });
   }
   catch(err: any) {

@@ -1,1 +1,5 @@
-<p>movies-list works!</p>
+<div class="movie-list-cont">
+  <div *ngFor="let movie of movies; let i = index" class="movie-card-container">
+    <app-card [movie]="movie" [index]="i"></app-card>
+  </div>
+</div>
