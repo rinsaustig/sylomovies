@@ -2,4 +2,11 @@
   <div class="badge">
     <img src="{{ movie.poster_path }}" alt="" class="card" />
   </div>
+  <div class="movie-details">
+    <p>{{ movie.original_title }}</p>
+    <div class="vote-average">
+      <ngb-rating [rate]="movie.vote_average"></ngb-rating>
+      <p>{{ movie.vote_average }}</p>
+    </div>
+  </div>
 </div>

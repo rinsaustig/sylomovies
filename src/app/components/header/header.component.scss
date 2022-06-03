@@ -10,6 +10,9 @@
     width: 100%;
     z-index: 10;
     transition: top 0.2s linear;
+    box-shadow: 6px -1px 37px -4px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 6px -1px 37px -4px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 6px -1px 37px -4px rgba(0, 0, 0, 0.72);
 }
 .content {
     width: 100%;

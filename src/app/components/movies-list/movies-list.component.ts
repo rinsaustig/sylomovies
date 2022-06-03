@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MovieModel } from 'src/app/models/movie.interface';
 
 import { AppStore } from 'src/app/store/app.store';
@@ -11,10 +12,9 @@ import { AppStore } from 'src/app/store/app.store';
 export class MoviesListComponent implements OnInit {
   movies: MovieModel[] = [];
 
-  constructor(private store: AppStore) {
+  constructor(private store: AppStore, private router: Router) {
     this.store.state$.subscribe((res) => {
       this.movies = res.movies;
-      console.log('store2', this.movies);
     });
   }
   catch(err: any) {
@@ -22,4 +22,9 @@ export class MoviesListComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  openMovieDetails(index: number) {
+    this.store.saveMovieSelected(this.movies[index]);
+    this.router.navigate(['/movie']);
+  }
 }

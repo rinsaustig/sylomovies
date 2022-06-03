@@ -1,0 +1,119 @@
+html {
+    width: 100vw;
+}
+.container-movie-page {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--dark-green-color);
+
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+}
+.single-movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--background-color);
+    padding: 2em;
+}
+.card-container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @media (max-width: 564px) {
+        padding: 0;
+    }
+}
+.card {
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #282c34;
+    border-radius: 8px;
+    color: white;
+    height: 80vh;
+
+    @media (max-width: 564px) {
+        width: 90vw;
+        height: auto;
+    }
+
+    .badge {
+        top: 4px;
+        right: 4px;
+        transform: scale(1) translate(50%, -50%);
+        transform-origin: 100% 0%;
+        position: absolute;
+    }
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-left: 0.1em;
+    color: #000;
+}
+.movie-details p {
+    font-size: 0.8em;
+    margin: 0;
+    padding-right: 2em;
+    width: 100%;
+}
+
+.vote-average {
+    font-size: 1.5em;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.movie-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-top: 2.3em;
+    padding-right: 3em;
+    padding-bottom: 2 rem;
+    padding-left: 1.5em;
+    margin-left: 1em;
+    background-color: var(--dark-green-color);
+    max-width: 1000px;
+}
+.movie-info-container h3 {
+    color: #fff;
+}
+.cast-list-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+}
+.cast-container {
+    padding: 2.5em;
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+}
+.cast-card-container {
+    width: 175px;
+}
+
+.cast-card {
+    width: 175px;
+}
+.button-ctn {
+    margin-top: 1em;
+    padding-bottom: 1em;
+}

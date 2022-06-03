@@ -2,7 +2,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
 }
 .card {
     padding: 5px;
@@ -11,6 +11,7 @@
     border-radius: 8px;
     color: white;
     width: 275px;
+    height: 378px;
     cursor: pointer;
 
     .badge {
@@ -32,4 +33,27 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 16px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    text-align: left;
+    width: 280px;
+    margin-bottom: 2rem;
+    margin-left: 1em;
+}
+.movie-details p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.vote-average {
+    font-size: 1.2em;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
 }

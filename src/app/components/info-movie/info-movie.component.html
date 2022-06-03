@@ -1,0 +1,32 @@
+<div class="container-movie-page" *ngIf="movie !== undefined">
+  <div class="single-movie-container">
+    <div *ngIf="movie !== undefined">
+      <div class="badge">
+        <img src="{{ movie.poster_path }}" alt="" class="card" />
+      </div>
+    </div>
+  </div>
+  <div class="movie-info-container">
+    <h3>{{ movie.original_title }}</h3>
+    <div class="movie-details">
+      <div class="vote-average">
+        <ngb-rating [rate]="movie.vote_average"></ngb-rating>
+        <p>{{ movie.vote_average }}</p>
+      </div>
+    </div>
+    <p>{{ movie.overview }}</p>
+    <div class="button-ctn">
+      <button class="btn btn-outline-dark btn-sm" (click)="navigateBack()">
+        Regresar
+      </button>
+    </div>
+  </div>
+</div>
+<div class="cast-container" *ngIf="cast !== null">
+  <div class="cast-list-cont">
+    <div *ngFor="let ac of cast; let i = index" class="cast-card-container">
+      <img src="{{ ac.profile_path }}" alt="{{ ac.name }}" class="cast-card" />
+      <p>{{ ac.name }}</p>
+    </div>
+  </div>
+</div>

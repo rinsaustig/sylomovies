@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-carousel">
   <img src="assets/cartelera.png" alt="cartelera" class="cart-img" />
 </div>
 <div class="img-container">
@@ -13,22 +13,16 @@
       <ng-template ngbSlide *ngFor="let movie of movies; index as i">
         <div class="movie-title-container">
           <div class="carousel-caption">
-            <h3>{{ movies[i].original_title }}</h3>
+            <h2 class="">{{ movies[i].original_title }}</h2>
           </div>
         </div>
-        <a
-          href="https://www.google.fr/?q=Number+{{ i }}"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          <div class="img-container">
-            <img
-              [src]="movie.poster_path"
-              alt="{{ this.movies[i].overview }}"
-              class="movie-img"
-            />
-          </div>
-        </a>
+        <div class="img-container" (click)="openMovieDetails(i)">
+          <img
+            [src]="movie.poster_path"
+            alt="{{ this.movies[i].overview }}"
+            class="movie-img"
+          />
+        </div>
       </ng-template>
     </ngb-carousel>
   </div>
