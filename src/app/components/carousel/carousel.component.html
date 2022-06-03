@@ -16,11 +16,14 @@
             <h2 class="">{{ movies[i].original_title }}</h2>
           </div>
         </div>
-        <div class="img-container" (click)="openMovieDetails(i)">
+        <div
+          class="img-container mx-auto d-block"
+          (click)="openMovieDetails(i)"
+        >
           <img
             [src]="movie.poster_path"
             alt="{{ this.movies[i].overview }}"
-            class="movie-img"
+            class="movie-img rounded mx-auto d-block"
           />
         </div>
       </ng-template>

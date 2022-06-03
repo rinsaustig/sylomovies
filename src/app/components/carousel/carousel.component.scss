@@ -44,11 +44,16 @@
             mix-blend-mode: overlay;
         }
     }
+
+    @media (max-width: 600px) {
+        .img-container {
+            mix-blend-mode: normal;
+        }
+    }
 }
 
 .movie-img {
-    width: 100%;
-    object-fit: cover;
+    width: 98vw;
     position: relative;
     opacity: 0.6;
     top: -140px;
