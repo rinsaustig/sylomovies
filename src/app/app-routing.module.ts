@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
 import { SingleMovieComponent } from './components/single-movie/single-movie.component';
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'movie',
     component: SingleMovieComponent,
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
   },
 ];
 

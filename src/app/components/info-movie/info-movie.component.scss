@@ -96,7 +96,8 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10px;
     color: #fff;
 }
 .cast-container {

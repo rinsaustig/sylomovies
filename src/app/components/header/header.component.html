@@ -8,6 +8,7 @@
         </a>
       </div>
       <form
+        [formGroup]="form"
         class="search_form"
         id="inner_search_form"
         action="/search"
@@ -27,9 +28,15 @@
             spellcheck="false"
             placeholder="Buscar una película..."
             value=""
+            formControlName="search"
           />
         </label>
-        <input type="submit" value="Buscar" class="submit" />
+        <input
+          type="submit"
+          value="Buscar"
+          class="submit"
+          (click)="onSubmit()"
+        />
       </form>
     </div>
   </div>

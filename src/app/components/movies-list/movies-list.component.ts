@@ -12,16 +12,34 @@ import { AppStore } from 'src/app/store/app.store';
 export class MoviesListComponent implements OnInit {
   movies: MovieModel[] = [];
 
-  constructor(private store: AppStore, private router: Router) {
-    this.store.state$.subscribe((res) => {
-      this.movies = res.movies;
-    });
-  }
+  constructor(private store: AppStore, private router: Router) {}
   catch(err: any) {
     console.log(err);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.state$.subscribe((res) => {
+      if (res.flag) {
+        this.initialiceSearch();
+      } else {
+        this.initialice();
+      }
+    });
+  }
+
+  initialice() {
+    this.store.state$.subscribe((res) => {
+      this.movies = res.movies;
+    });
+  }
+
+  initialiceSearch() {
+    this.store.state$.subscribe((res) => {
+      if (res.search) {
+        this.movies = res.search;
+      }
+    });
+  }
 
   openMovieDetails(index: number) {
     this.store.saveMovieSelected(this.movies[index]);

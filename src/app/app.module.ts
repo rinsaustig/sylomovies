@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { SingleMovieComponent } from './components/single-movie/single-movie.com
 import { InfoMovieComponent } from './components/info-movie/info-movie.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
+import { ResultsComponent } from './components/results/results.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,13 @@ import { HomeComponent } from './components/home/home.component';
     SingleMovieComponent,
     InfoMovieComponent,
     HomeComponent,
+    SearchComponent,
+    ResultsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
     NgbModule,
