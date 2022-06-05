@@ -9,13 +9,5 @@ import { AppStore } from 'src/app/store/app.store';
 export class ResultsComponent implements OnInit {
   constructor(private store: AppStore) {}
 
-  ngOnInit(): void {
-    this.initialice();
-  }
-
-  initialice() {
-    this.store.state$.subscribe((res) => {
-      console.log(res.search);
-    });
-  }
+  ngOnInit(): void {}
 }

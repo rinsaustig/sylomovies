@@ -11,6 +11,7 @@ export const environment = {
   language: '&language=es-ES',
   imageUrl: 'https://image.tmdb.org/t/p/original',
   searchUrl: 'https://api.themoviedb.org/3/search/movie',
+  linkedin: 'https://www.linkedin.com/in/rodrigo-gomez-insausti-0a867b48/',
 };
 
 /*

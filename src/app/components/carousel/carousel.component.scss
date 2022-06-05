@@ -50,6 +50,10 @@
             mix-blend-mode: normal;
         }
     }
+
+    @media (min-width: 1600px) {
+        height: 750px;
+    }
 }
 
 .movie-img {
@@ -63,6 +67,10 @@
         width: 100%;
         top: 0px;
         opacity: 1;
+    }
+
+    @media (min-width: 1600px) {
+        top: -80px;
     }
 }
 

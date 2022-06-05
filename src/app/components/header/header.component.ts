@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import swal from 'sweetalert';
 
 import { HeaderService } from 'src/app/services/header-service/header.service';
 import { AppStore } from 'src/app/store/app.store';
@@ -45,7 +46,12 @@ export class HeaderComponent implements OnInit {
           this.router.navigate(['/search']);
         });
     } else {
-      console.log(this.form.valid);
+      swal({
+        title: 'Incorrecto',
+        text: 'Debes ingresar al menos dos caracteres para hacer una búsqueda..',
+        icon: 'warning',
+        dangerMode: true,
+      });
     }
   }
 }

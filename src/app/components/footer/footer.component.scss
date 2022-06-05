@@ -1,20 +1,21 @@
 @import url("http://fonts.cdnfonts.com/css/akrobat");
-.search-main {
-    background-color: var(--secondary-color);
-}
-.header {
-    padding: 1.5em;
-    padding-bottom: 0;
+.footer-cont {
+    background-color: #000;
     font-family: "Akrobat Black", sans-serif;
-    padding-left: 2.5em;
-    background-color: var(--secondary-color);
+    padding: 2em 2.5em;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.name-container {
+    color: #fff;
+    font-size: 16px;
     user-select: none; /* supported by Chrome and Opera */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-}
-
-.header__title span {
-    color: #fff;
 }

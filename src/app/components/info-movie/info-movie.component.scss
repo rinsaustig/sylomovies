@@ -106,6 +106,9 @@ html {
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: row;
+    box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.75);
 }
 .cast-card-container {
     width: 175px;
@@ -113,8 +116,17 @@ html {
 
 .cast-card {
     width: 175px;
+    @media (max-width: 400px) {
+        width: 275px;
+    }
 }
 .button-ctn {
     margin-top: 1em;
     padding-bottom: 1em;
+}
+
+.footer-cont {
+    box-shadow: 2px 6px 47px 0px rgba(0, 0, 0, 0.69);
+    -webkit-box-shadow: 2px 6px 47px 0px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 2px 6px 47px 0px rgba(0, 0, 0, 0.69);
 }
