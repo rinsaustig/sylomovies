@@ -16,6 +16,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin: 0;
     background-color: var(--background-color);
     padding: 2em;
 }
@@ -102,13 +103,10 @@ html {
 }
 .cast-container {
     padding: 2.5em;
-    width: 100%;
+    margin: 0;
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: row;
-    box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 255, 255, 0.75);
 }
 .cast-card-container {
     width: 175px;
@@ -117,7 +115,7 @@ html {
 .cast-card {
     width: 175px;
     @media (max-width: 400px) {
-        width: 275px;
+        width: 85vw;
     }
 }
 .button-ctn {
