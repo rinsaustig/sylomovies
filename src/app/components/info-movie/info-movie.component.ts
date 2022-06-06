@@ -55,6 +55,10 @@ export class InfoMovieComponent implements OnInit {
   }
 
   navigateBack() {
+    if (this.store.flag$) {
+      this.store.deleteMovies();
+      this.store.switchFlag(false);
+    }
     this.router.navigate(['/']);
   }
 }

@@ -55,6 +55,7 @@ export class AppStore extends ComponentStore<OrderState> {
     ...state,
     movieSelected: movie,
   }));
+  flag$ = this.select((state) => state.flag);
   header$ = this.select((state) => state.header);
   movies$: Observable<MovieModel[]> = this.select((state) => state.movies);
   movieSelected$: Observable<MovieModel | null> = this.select(
